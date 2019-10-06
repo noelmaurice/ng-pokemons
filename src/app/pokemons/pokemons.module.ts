@@ -8,6 +8,8 @@ import { PokemonTypeColorPipe } from './pokemon-type-color.pipe';
 
 import { PokemonRoutingModule } from "./pokemons-routing.module";
 
+import { PokemonsService } from "./pokemons.service";
+
 @NgModule({
 	imports: [
 		CommonModule, // module fils : module root => BrowserModule
@@ -19,6 +21,8 @@ import { PokemonRoutingModule } from "./pokemons-routing.module";
 		BorderCardDirective,
 		PokemonTypeColorPipe
 	],
-	providers: []
+	providers: [
+		PokemonsService
+	]
 })
 export class PokemonsModule { }
