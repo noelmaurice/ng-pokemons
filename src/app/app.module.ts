@@ -8,6 +8,7 @@ import { InMemoryDataService } from "./in-memory-data.service";
 
 import { PokemonsModule } from "./pokemons/pokemons.module";
 
+
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found.component';
 
