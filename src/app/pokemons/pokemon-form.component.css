@@ -1,0 +1,11 @@
+
+
+/* le nom du stype est celui créé par angular pour le form */
+.ng-valid[required], .ng-valid.required {
+    border-left: 5px solid #42A948; /* bordure verte */
+  }
+  
+  /* le nom du stype est celui créé par angular pour le form */
+  .ng-invalid:not(form) {
+    border-left: 5px solid #a94442; /* bordure rouge */
+  }
