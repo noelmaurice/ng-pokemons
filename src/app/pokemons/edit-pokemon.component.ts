@@ -9,9 +9,19 @@ import { PokemonsService } from './pokemons.service';
     <h2 class="header center">Editer {{ pokemon?.name }}</h2>
 		<p class="center">
 			<img *ngIf="pokemon" [src]="pokemon.picture"/>
-		</p>
+    </p>
     <pokemon-form [pokemon]="pokemon"></pokemon-form>
   `,
+
+  /**
+   * [pokemon]="pokemon" : liaison de propriété
+   * 
+   * "pokemon" : pokemon d'entrée du composant
+   * 
+   * [pokemon] : liaison vers attribut pokemon de la classe EditPokemonComponent
+   * 
+   * pokemon-form : sélecteur du formulaire
+   */
 })
 export class EditPokemonComponent implements OnInit {
 
