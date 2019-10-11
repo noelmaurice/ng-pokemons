@@ -13,6 +13,8 @@ import { FormsModule } from "@angular/forms";
 import { EditPokemonComponent } from "./edit-pokemon.component";
 import { PokemonFormComponent } from "./pokemon-form.component";
 
+import { PokemonSearchComponent } from "./search-pokemon.component";
+
 
 @NgModule({
 	imports: [
@@ -25,6 +27,7 @@ import { PokemonFormComponent } from "./pokemon-form.component";
 		DetailPokemonComponent,
 		EditPokemonComponent,
 		PokemonFormComponent,
+		PokemonSearchComponent,
 		BorderCardDirective,
 		PokemonTypeColorPipe
 	],
