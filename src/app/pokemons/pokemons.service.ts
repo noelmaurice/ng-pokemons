@@ -18,13 +18,11 @@ export class PokemonsService {
     // requête HTTP sur l'URL passé en paramètre : retourne un flux qui contiendra un tableau de pokémons
     return this.http.get<Pokemon[]>(this.pokemonsUrl).pipe(
       // affichage d'un message sur l'action
-      tap(_ => this.log(`fetched pokemons`)),
+      tap(_ => this.log('fetched pokemons')),
       // gestion des erreurs éventuelles
       catchError(this.handleError('getPokemons', []))
     );
   }
-
-
 
   /* handleError */
   private handleError<T>(operation = 'operation', result?: T) {
@@ -65,20 +63,20 @@ export class PokemonsService {
     };
 
     return this.http.put(this.pokemonsUrl, pokemon, httpOptions).pipe(
-      tap(_ => this.log(`updated pokemon id=${pokemon.id}`)),
+      tap(_ => this.log('updated pokemon id=' + pokemon.id)),
       catchError(this.handleError<any>('updatePokemon'))
     );
   }
 
   /** DELETE pokemon */
   deletePokemon(pokemon: Pokemon): Observable<Pokemon> {
-    const url = `${this.pokemonsUrl}/${pokemon.id}`;
+    const url = this.pokemonsUrl + '/' + pokemon.id;
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
 
     return this.http.delete<Pokemon>(url, httpOptions).pipe(
-      tap(_ => this.log(`deleted pokemon id=${pokemon.id}`)),
+      tap(_ => this.log('deleted pokemon id=' + pokemon.id)),
       catchError(this.handleError<Pokemon>('deletePokemon'))
     );
   }
@@ -90,10 +88,9 @@ export class PokemonsService {
       return of([]);
     }
 
-    return this.http.get<Pokemon[]>(`api/pokemons/?name=${term}`).pipe(
-      tap(_ => this.log(`found pokemons matching "${term}"`)),
+    return this.http.get<Pokemon[]>(this.pokemonsUrl + '/?name=' + term).pipe(
+      tap(_ => this.log('found pokemons matching "' + term + '"')),
       catchError(this.handleError<Pokemon[]>('searchPokemons', []))
     );
   }
-
 }

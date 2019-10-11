@@ -47,6 +47,11 @@ export class DetailPokemonComponent implements OnInit {
 		
 	}
 
+
+	delete (pokemon: Pokemon) : void {
+		this.pokemonsService.deletePokemon(pokemon).subscribe(_ => this.goBack());
+	}
+
 	goBack(): void {
         /**
          * utilisation du router au lieu de la commande :
