@@ -35,8 +35,17 @@ export class ListPokemonComponent implements OnInit {
     // this.pokemons = POKEMONS; // référence déclarée dans les imports
 
     // utilisation du service pour récupérer tous les pokémons
-    this.pokemons = this.pokemonsService.getPokemons();
+    // this.pokemons = this.pokemonsService.getPokemons();
+
+    // utilisation d'un Observable à la place du service initial
+    this.getPokemons();
   }
+
+  // utilisation d'un Observable à la place du service initial
+  getPokemons(): void {
+		this.pokemonsService.getPokemons()
+			.subscribe(pokemons => this.pokemons = pokemons);
+	}
 
   selectPokemon(pokemon: Pokemon) {
     console.log('Vous avez selectionné ' + pokemon.name);
