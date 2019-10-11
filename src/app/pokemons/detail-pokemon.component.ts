@@ -36,7 +36,13 @@ export class DetailPokemonComponent implements OnInit {
 			}
 		}
 		*/
-		this.pokemon = this.pokemonsService.getPokemon(id);
+		
+		// utilisation du service
+    	// this.pokemon = this.pokemonsService.getPokemon(id);
+
+    	// un observable est utilisé à la place du service initial
+    	this.pokemonsService.getPokemon(id).subscribe(pokemon => this.pokemon = pokemon);
+		
 		console.log(this.pokemon.name);
 		
 	}
