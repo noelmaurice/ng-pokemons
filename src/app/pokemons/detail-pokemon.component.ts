@@ -39,11 +39,12 @@ export class DetailPokemonComponent implements OnInit {
 		
 		// utilisation du service
     	// this.pokemon = this.pokemonsService.getPokemon(id);
-
+		// console.log(this.pokemon.name);
+		
     	// un observable est utilisé à la place du service initial
     	this.pokemonsService.getPokemon(id).subscribe(pokemon => this.pokemon = pokemon);
 		
-		console.log(this.pokemon.name);
+		
 		
 	}
 
@@ -58,7 +59,7 @@ export class DetailPokemonComponent implements OnInit {
          * window.history.back();
          * De cette manière c'est la page 'pokemons' qui sera affichée à chaque 'back'
          */ 
-		this.router.navigate(['/pokemons']);
+		this.router.navigate(['/pokemon/all']);
 	}
 
 	goEdit(pokemon: Pokemon): void
