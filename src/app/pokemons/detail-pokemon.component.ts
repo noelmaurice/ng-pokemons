@@ -43,9 +43,6 @@ export class DetailPokemonComponent implements OnInit {
 		
     	// un observable est utilisé à la place du service initial
     	this.pokemonsService.getPokemon(id).subscribe(pokemon => this.pokemon = pokemon);
-		
-		
-		
 	}
 
 
