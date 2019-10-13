@@ -11,7 +11,7 @@ export class AuthGuardService implements CanActivate {
 
     /**
      * 
-     * @param route route qui sera appelé en cas d'identification
+     * @param route route après identification réussie
      * @param state capture de l'URL en courante
      */
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {

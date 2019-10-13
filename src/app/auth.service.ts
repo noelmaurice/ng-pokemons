@@ -10,7 +10,7 @@ export class AuthService {
 	// Une méthode de connexion
 	login(name: string, password: string): Observable<boolean> {
 		// Faites votre appel à un service d'authentification...
-		let isLoggedIn = (name === 'admin' && password === 'admin');
+		let isLoggedIn = (name === 'admin' && password === 'demo');
 
 		return of(true).pipe(
 			delay(1000),
