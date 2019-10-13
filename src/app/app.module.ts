@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 
@@ -33,6 +33,9 @@ import { PageNotFoundComponent } from './page-not-found.component';
 	],
 	bootstrap: [
 		AppComponent
-	]
+	],
+	providers: [ 
+		Title // on fournis le service 'Title' à l'ensemble de l'application 
+	],
 })
 export class AppModule { }
