@@ -1,3 +1,26 @@
+# Introduction
+
+Ce projet est un projet pédagogique. En règle générale, par souci de discrétion et de respect pour les employeurs, les projets professionnels ne sont pas disponibles sur ce repository.
+
+# Copie d'écrans de l'application 
+
+## Affichage du formulaire de connexion de l'application WEB " One page "
+
+<img src="doc/demo/connexion.png" />
+
+## Affichage des items disponibles avec champs de recherche
+
+<img src="doc/demo/items.png " />
+
+## Affichage d'un item
+
+<img src="doc/demo/item.png " />
+
+## Modification d'un item
+
+<img src="doc/demo/modification.png " />
+
+
 # Pokemon
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.7.
